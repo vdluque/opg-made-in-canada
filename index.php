@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -41,13 +41,13 @@
 
             <ul class="nav-holder">
 
-                <li class="nav-el environment"><a href="javascript:void(0);">Environment</a></li>
+                <li class="nav-el environment"><a href="#environmentAnchor" onclick="navscroll(this)">Environment</a></li>
 
-                <li class="nav-el economy"><a href="javascript:void(0);">Economy</a></li>
+                <li class="nav-el economy"><a href="#economyAnchor" onclick="navscroll(this)">Economy</a></li>
 
-                <li class="nav-el communities"><a href="javascript:void(0);">Communities</a></li>
+                <li class="nav-el communities"><a href="#communitiesAnchor" onclick="navscroll(this)">Communities</a></li>
 
-                <li class="nav-el innovation"><a href="javascript:void(0);">Innovation</a></li>
+                <li class="nav-el innovation"><a href="#innovationAnchor" onclick="navscroll(this)">Innovation</a></li>
 
                 <li class="nav-el sound">
 
@@ -66,18 +66,18 @@
             <a class="mobile-logo" href="#top" ><img data-src="assets/media/img/L_OPG.png"></a>
 
             <li class="nav-el sound">
-                <a class="sound-toggle" href="javascript:void(0)"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+                <a class="sound-toggle" href="javascript:void(0)"><i class="fa fa-volume-off" aria-hidden="true"></i></a>
             </li>
 
             <ul class="nav-holder" id="mobileNav">
 
-                <li class="nav-el environment"><a href="#intro1" onclick="showNav()">Environment</a></li>
+                <li class="nav-el environment"><a href="#environmentAnchor" onclick="showNav()">Environment</a></li>
 
-                <li class="nav-el economy"><a href="#intro2" onclick="showNav()">Economy</a></li>
+                <li class="nav-el economy"><a href="#economyAnchor" onclick="showNav()">Economy</a></li>
 
-                <li class="nav-el communities"><a href="#communities" onclick="showNav()">Communities</a></li>
+                <li class="nav-el communities"><a href="#communitiesAnchor" onclick="showNav()">Communities</a></li>
 
-                <li class="nav-el innovation"><a href="#intro4" onclick="showNav()">Innovation</a></li>
+                <li class="nav-el innovation"><a href="#innovationAnchor" onclick="showNav()">Innovation</a></li>
 
             </ul>
 
@@ -87,11 +87,11 @@
 
     <div class="main" id="top">
 
-       <div class="video-overlay" style="background-image: url(./assets/media/img/hero.png);">
+       <div class="video-overlay" style="background-image: url(./assets/media/img/hero.jpg);">
             <!--[if lte IE 8]><img data-src="assets/media/power.jpg"><![endif]-->
             <div class="hero-text"> 
                 <h1>Made in Ontario.</h1>
-                <h4>At Ontario Power Generation,<br> we generate power with a greater purpose in mind.<br> That’s why we don’t just make electricity for Ontarians.</h4>
+                <h4>Across this province, Ontario Power Generation is working<br> with a greater purpose in mind. That’s why we don’t just make electricity for Ontarians.</h4>
             </div>
             <div id="more">
                 <a class="scroll-link" href="#scrollPoint">
@@ -102,8 +102,8 @@
                 </a>
             </div>
             <video class="top-video video" id="video" style="top: -200vh;" autoplay loop muted playsinline>
-                <source type="video/mp4" data-src="assets/media/video/footer.mp4"></source>
-                <source type="video/webm" data-src="assets/media/video/footer.webm"></source>
+                <source type="video/mp4" data-src="https://player.vimeo.com/external/241068101.hd.mp4?s=5ce742776ae127f45d035f336d2239026ee90b54&profile_id=174"></source>
+                <!-- <source type="video/webm" data-src="assets/media/video/footer.webm"></source> -->
             </video>
             <!-- <iframe class="top-video video" id="video" src="https://player.vimeo.com/video/241068101?background=1" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
  -->
@@ -133,12 +133,14 @@
 
             <a href="#intro4"><div data-bg="./assets/media/img/turbine.png" class="slide-down" id="row4">
                 <span class="row-overlay">
-                    <h2>We make hope for future generations.</h2>
+                    <h2>We make possibilities for future generations.</h2>
                 </span>
             </div></a>
         </div>
 
         <div class="content intro intro1" data-bg="./assets/media/img/intro1.png" id="intro1">
+
+            <span id="environmentAnchor" style="position: relative;top: 2vh;display: inline-block;"></span>
 
             <audio class="sound" id="sound_1" src="assets/media/sound/SKY_AND_FIELD_Audio.mp3" loop muted preload="metadata">
                 Your browser does not support the <code>audio</code> element.
@@ -146,11 +148,9 @@
 
             <div class="intro-overlay">
 
-                <div class="intro-text intro-environment" id="scroll-trigger">
+                <div class="intro-text intro-environment navlink" id="scroll-trigger">
 
                     <h1 ><span style="font-weight: 100;">Clean Air.</span> Made in Ontario.</h1>
-
-                    <span id="environmentAnchor" style="position: relative;top: -60vh;display: inline-block;"></span>
 
                     <p>Ontario Power Generation is committed to keeping Ontario’s air as clean as possible. That’s why in 2014 we closed the last of our last coal plants. Now our electricity is more than 99% free of smog and carbon emissions, which helps battle climate change and keeps the air clean for all Ontarians.</p>
 
@@ -161,11 +161,11 @@
         </div>
 
         <div class="content click-video intro1" id="breaths-video">
-            <!-- <video class="breaths-video video" id="video" loop muted>
-                <source type="video/webm" data-src="assets/media/waves.webm"></source>
-                <source type="video/mp4" data-src="assets/media/video/trees.mp4"></source>
-            </video> -->
-            <iframe class="breaths-video video" id="video" src="https://player.vimeo.com/video/241068042" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <video class="breaths-video video" id="video" loop playsinline poster="./assets/media/img/Breathe_thumb.jpg">
+                <!-- <source type="video/webm" data-src="assets/media/waves.webm"></source> -->
+                <source type="video/mp4" data-src="https://player.vimeo.com/external/241068042.hd.mp4?s=5da12bfa5a644c9e7da462c2a9eff2aa70193a11&profile_id=174"></source>
+            </video>
+            <!-- <iframe class="breaths-video video" id="video" src="https://player.vimeo.com/video/241068042" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
             <div class="playpause">
                 <img data-src="assets/media/img/playBtn.png">
             </div>
@@ -220,15 +220,15 @@
 
         <div class="content intro intro2" data-bg="./assets/media/img/intro2.png" id="intro2">
 
+            <span id="economyAnchor" style="position: relative;top: 2vh;display: inline-block;"></span>
+
             <audio class="sound" id="sound_3" src="assets/media/sound/HARDHATS_Audio.mp3" loop muted preload="metadata">
                 Your browser does not support the <code>audio</code> element.
             </audio>
 
             <div class="intro-overlay">
 
-                <div class="intro-text intro-jobs">
-
-                    <span id="economyAnchor" style="position: relative;top: -45vh;display: inline-block;"></span>
+                <div class="intro-text intro-jobs navlink">
 
                     <h1><span style="font-weight: 100;">Stronger Economies.</span> Made in Ontario.</h1>
 
@@ -241,7 +241,7 @@
         </div>
 
         <div class="content slides intro2" id="slides2" style="background-color: black;">
-            <video class="video click-video" id="video0" loop muted playsinline poster="assets/media/img/Joe_Thumb.png">
+            <video class="video click-video" id="video0" loop playsinline poster="./assets/media/img/Joe_thumb.jpg">
                 <source src="https://player.vimeo.com/external/241102343.hd.mp4?s=6336bed85c0a7a3099970b7dfc055e1af843e54b&profile_id=174"></source>
                 <!-- <source type="video/webm" data-src="assets/media/video/footer.webm"></source> -->
             </video>
@@ -260,19 +260,19 @@
                 <div class="container siema">
 
                     <div>
-                        <video class="slider-video1 video slider-image" id="video1" onclick="switchVideo(this.id)" loop muted playsinline poster="assets/media/img/Gerry_Thumb.png">
+                        <video class="slider-video1 video slider-image" id="video1" onclick="switchVideo(this.id)" loop playsinline poster="./assets/media/img/Gerry_thumb.jpg">
                             <source src="https://player.vimeo.com/external/241322012.sd.mp4?s=a051480397cc1c7de79c92be4a1cbb585f767f5d&profile_id=165"></source>
                         </video>
                         <!-- <img data-src="./assets/media/opg-slide2.jpg" class="slider-image"> -->
                     </div>
                     <div>
-                        <video class="slider-video2 video slider-image" id="video2" onclick="switchVideo(this.id)" loop muted playsinline poster="assets/media/img/Joe_Thumb.png">
+                        <video class="slider-video2 video slider-image" id="video2" onclick="switchVideo(this.id)" loop playsinline poster="assets/media/img/Joe_thumb.jpg">
                             <source src="https://player.vimeo.com/external/241102343.hd.mp4?s=6336bed85c0a7a3099970b7dfc055e1af843e54b&profile_id=174"></source>
                         </video>
                         <!-- <img data-src="./assets/media/opg-slide3.jpg" class="slider-image"> -->
                     </div>
                     <div>
-                        <video class="slider-video3 video slider-image" id="video3" onclick="switchVideo(this.id)" loop muted playsinline poster="assets/media/img/Gerry_Thumb.png">
+                        <video class="slider-video3 video slider-image" id="video3" onclick="switchVideo(this.id)" loop playsinline poster="assets/media/img/Gerry_thumb.jpg">
                             <source src="https://player.vimeo.com/external/241322012.sd.mp4?s=a051480397cc1c7de79c92be4a1cbb585f767f5d&profile_id=165"></source>
                         </video>
                         <!-- <img data-src="./assets/media/opg-slide1.jpg" class="slider-image"> -->
@@ -285,7 +285,7 @@
             </div>
         </div>
 
-        <div class="content jobs-lb" id="contentLightbox" data-bg="assets/media/img/welder.png">
+        <div class="content jobs-lb intro2" id="contentLightbox" data-bg="assets/media/img/welder.png">
 
             <audio class="sound" id="sound_4" src="assets/media/sound/WELDING_Audio.mp3" loop muted preload="metadata">
                 Your browser does not support the <code>audio</code> element.
@@ -326,7 +326,7 @@
 
         </div>
 
-        <div class="content partnerships-lb" id="contentLightbox" data-bg="./assets/media/img/partnership.jpg">
+        <div class="content partnerships-lb intro2" id="contentLightbox" data-bg="./assets/media/img/partnership.jpg">
 
             <audio class="sound" id="sound_5" src="assets/media/sound/WIND_CONSTRUCTION_Audio.mp3" loop muted preload="metadata">
                 Your browser does not support the <code>audio</code> element.
@@ -355,7 +355,7 @@
 
         </div>
 
-        <div class="content intro" data-bg="assets/media/img/Moderating-Price.jpg" id="introNew">
+        <div class="content intro intro2" data-bg="assets/media/img/Moderating-Price.jpg" id="introNew">
 
             <audio class="sound" id="sound_new" src="assets/media/sound/WIND_CONSTRUCTION_Audio.mp3" loop muted preload="metadata">
                 Your browser does not support the <code>audio</code> element.
@@ -377,14 +377,14 @@
 
         <div class="content communities-lb" id="contentLightbox" data-bg="./assets/media/img/community.jpg">
 
+            <span id="communitiesAnchor" style="position: relative;top: 1vh;display: inline-block;"></span>
+
             <!-- <audio id="sound_6" src="assets/media/sound/waterfallSound.mp3" loop muted preload="metadata">
                 Your browser does not support the <code>audio</code> element.
             </audio> -->
 
             <div class="caption-overlay" id="communities">
-                <div class="lightbox-link-holder">
-                    
-                    <span id="communitiesAnchor" style="position: relative;top: -45vh;display: inline-block;"></span>
+                <div class="lightbox-link-holder navlink">
 
                     <h4><span style="font-weight: 100;">Liveable Communities.</span><br id='tabhide'> Made in Ontario.</h4>
                     <p style="text-align: left;">Last year, Ontario Power Generation supported more than 850 grassroots initiatives and programs at our local sites and Indigenous communities across Ontario covering a range of areas, including: arts and culture, education, environment, health and safety, and sports programs. Here are a few:</p>
@@ -402,12 +402,12 @@
                     </span>
                     <span class="lightbox-link" id="trails">
                         <a href="./assets/media/img/TuesdayOnTheTrails.jpg" class="lightbox_trigger">
-                            Tuesday on the Trails
+                            Tuesday on the Trail
                             <p style="display: none;">These days, kids don’t get the chance to explore the great outdoors as much as they should. Our Tuesdays on the Trail program is a two-month program designed to inspire kids between 5 and 12 with nature’s hidden delights. Hosted by our two nuclear generating stations in Pickering and Darlington, activities take place at Alex Robertson Park and the Enniskillen Conservation Area and are free for everyone. Every week, community partners arrive with bundles of equipment, ready for new adventures. With partners like Earth Rangers and Scientists in Schools, kids get to do fun things like go on hikes, do arts and crafts, and learn interesting things about nature. Adults are plentiful too with some kids bringing their entire family. The program runs for the duration of the summer and reaches hundreds of kids many of whom come back every week and some, every year.</p>
                         </a>
                     </span>
                     <span class="lightbox-link" id="tackle">
-                        <a href="./assets/media/img/communities-lb.jpg" class="lightbox_trigger">
+                        <a href="./assets/media/img/tackleshare.jpg" class="lightbox_trigger">
                             TackleShare
                             <p style="display: none;">TackleShare is a province-wide program that connects Ontario families with all the equipment and resources they need to enjoy fishing in Ontario’s beautiful lakes and rivers. Run by the Ontario Federation of Anglers and Hunters (OFAH), TackleShare has received OPG’s support since 2010, in part to help spread the word about water safety near OPG’s dams and hydroelectric stations. Fishing kits are available for free at over 140 loaner sites across Ontario and to further bolster the program’s reach, a travelling TackleShare van makes regular appearances at weekend events across the province.</p>
                         </a>
@@ -425,8 +425,11 @@
 
         </div>
 
-        <div class="content darlington" id="darlington">
-            <video class="video click-video" id="video" loop muted poster="assets/media/img/DarlingtonPoster.png">
+        <div class="content darlington click-video innovation" id="darlington">
+            
+            <span id="innovationAnchor" style="position: relative;top: -99vh;display: inline-block;"></span>
+
+            <video class="video click-video" id="video" loop playsinline poster="assets/media/img/darlington2.png">
                 <source src="https://player.vimeo.com/external/241068091.sd.mp4?s=2d30d5ffdc07e318288d97bc0f715eaab990ba72&profile_id=165"></source>
                 <track default label="English" kind="subtitles" srclang="en" src="assets/media/video/original-opg_innovation_at_darlington.vtt">
             </video>
@@ -434,14 +437,14 @@
                 <img data-src="assets/media/img/playBtn.png">
             </div>
             <div class="slides-wrap">
-                <span id="darlingtonAnchor" style="position: relative;top: -45vh;display: inline-block;"></span>
+                
                 <h1><span style="font-weight: 100;">Innovation.</span> Made in Ontario.</h1>
 
                 <p>At OPG, we’re not just generating power for today’s Ontarians, but for tomorrow’s as well. Our world-leading Darlington Nuclear Generating Station is undergoing a major upgrade that will see it continue to provide clean energy past 2050.</p>
             </div>
         </div>
 
-        <div class="content intro" data-bg="assets/media/img/intro4.png" id="intro4">
+        <div class="content intro innovation" data-bg="assets/media/img/intro4.png" id="intro4">
 
             <audio class="sound" id="sound_7" src="assets/media/sound/E-CAR_Audio.mp3" loop muted preload="metadata">
                 Your browser does not support the <code>audio</code> element.
@@ -461,7 +464,7 @@
 
         </div>
 
-        <div class="content intro" data-bg="./assets/media/img/satellite.jpg" id="intro5">
+        <div class="content intro innovation" data-bg="./assets/media/img/satellite.jpg" id="intro5">
 
             <audio class="sound" id="sound_8" src="assets/media/sound/SPACE_Audio.mp3" loop muted preload="metadata">
                 Your browser does not support the <code>audio</code> element.
@@ -481,7 +484,7 @@
 
         </div>
 
-        <div class="content intro" data-bg="./assets/media/img/cobalt.jpg" id="intro6">
+        <div class="content intro innovation" data-bg="./assets/media/img/cobalt.jpg" id="intro6">
 
             <div class="intro-overlay">
 
@@ -543,7 +546,7 @@
 
     </div>
 
-    <div class="content footer" data-bg="assets/media/img/footer.png">
+    <div class="content footer" data-bg="assets/media/img/footer.jpg">
 
         <video class="top-video video" id="video" autoplay loop muted playsinline>
             <source type="video/webm" data-src="assets/media/video/header.webm"></source>
@@ -572,7 +575,7 @@
             <a class="logo" href="#top"><img data-src="assets/media/img/L_OPG_W.png"></a>
             <div class="link instagram-link"><a href="https://www.instagram.com/opgpics/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
             <div class="link twitter-link"><a href="https://twitter.com/opg" target="_blank"><img src="assets/media/img/Twitter.svg"></a></div>
-            <div class="link facebook-link"><a href="https://www.facebook.com/ontariopowergeneration" target="_blank"><img src="assets/media/img/FBicon.svg"></a></div>
+            <div class="link facebook-link"><a href="https://www.facebook.com/Ontario-Power-Generation-504061526642471/" target="_blank"><img src="assets/media/img/FBicon.svg"></a></div>
             <div class="link youtube-link"><a href="https://www.youtube.com/user/opgvideos" target="_blank"><img src="assets/media/img/Youtube.svg"></a></div>
             <div class="link opg-link"><a href="http://www.opg.com/">OPG.COM</a></div>
         </div>

@@ -34,9 +34,31 @@ $(document).ready(function() {
 
 	});
 
+	$(window).on('scroll', function(){
+
+		if($(window).scrollTop() === 0) {
+	     	$(".nav-el.sound a.sound-toggle span").show("slide", {direction: "right"});
+	   	}else{
+	   		$(".nav-el.sound a.sound-toggle span").hide("slide", {direction: "right"});
+	   	}
+
+	});
+
+if (/Mobi/.test(navigator.userAgent)) {
+
+	window.my_mute = false;
+
+	console.log("no sfx on mobile");
+
+}else{
+
+	window.my_mute = true;
+
+	console.log("sfx on");
+
 	$(window).on('resize scroll load', function() {
 
-		if ($("#slides2").isInViewport()) {
+		if ($("#slides2").isInViewport() || $('#breaths-video').isInViewport() || $('#darlington').isInViewport()) {
 
 			$('audio').each(function(){
 				$(this).data('muted',true); 
@@ -53,8 +75,9 @@ $(document).ready(function() {
 				});
 
 			}
-		}
+		};
 
+		//audio play on section show
 			$(".video-overlay").isInViewport() ? $("#sound_head").get(0).play() : $("#sound_head").get(0).pause();
 
 			$("#intro1").isInViewport() ? $("#sound_1").get(0).play() : $("#sound_1").get(0).pause();
@@ -72,15 +95,56 @@ $(document).ready(function() {
 			$("#intro5").isInViewport() ? $("#sound_8").get(0).play() : $("#sound_8").get(0).pause();
 
 			$(".footer").isInViewport() ? $("#sound_footer").get(0).play() : $("#sound_footer").get(0).pause();
+		
+	});
+}
 
-		// if (!$(".click-video").isInViewport()) {
-		// 	var video = $(".click-video");
-		// 	video.get(0).pause = true;
-		// 	video.siblings(".playpause").fadeTo(1,1);
-		// }
+	$(window).on('scroll', function() {
+
+		$(".content").each( function() {
+
+			if ($(this).isInViewport()) {
+				$(this).addClass(" inview");
+			}else{
+				$(this).removeClass("inview");
+			}
+
+		});
+
+		$(".intro1").hasClass("inview") ? $("li.environment a").addClass("active") : $("li.environment a").removeClass("active");
+
+		$(".intro2").hasClass("inview") ? $("li.economy a").addClass("active") : $("li.economy a").removeClass("active");
+
+		$(".communities-lb").hasClass("inview") ? $("li.communities a").addClass("active") : $("li.communities a").removeClass("active");
+
+		$(".innovation").hasClass("inview") ? $("li.innovation a").addClass("active") : $("li.innovation a").removeClass("active");
+
 	});
 
 
+		
+		//section nav underlining 
+
+		// var sections = $('content'),
+		// 	nav = $('nav'), 
+		// 	nav_height = nav.outerHeight();
+ 
+		// $(window).on('scroll', function () {
+  // 			var cur_pos = $(this).scrollTop();
+ 
+  // 			sections.each(function() {
+	 //    		var top = $(this).offset().top - nav_height,
+	 //        	bottom = top + $(this).outerHeight();
+	 
+	 //    		if (cur_pos >= top && cur_pos <= bottom) {
+	 //      			nav.find('a').removeClass('active');
+	 //      			sections.removeClass('active');
+	 
+	 //      			$(this).addClass('active');
+	 //      			nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+	 //    		}
+		// 	});
+		// });
 
 	$("html").hasClass("video") ? $("html").removeClass("video") : console.log("html does not have video class");
 
@@ -92,9 +156,9 @@ $(document).ready(function() {
 	$('a[href*=\\#]').on('click', function(event){     
     	event.preventDefault();
     	smoothScrollingTo(this.hash);
-    	if (this.hasClass("set")) {
+    	// if (this.hasClass("set")) {
     		
-    	}
+    	// }
 	});
 
 	$(document).ready(function(){
@@ -207,7 +271,7 @@ $(document).ready(function() {
 				// $(this).parent().find(".playpause").css("height","100%");
 				$(this).parent().find(".playpause").fadeTo(1,1);
 				video.removeAttr("controls");
-				// slide.show();
+				slide.show();
 			}else{
 				console.log("playing video " + className + ". slide is:" + slide.attr('class'));
 				video.addClass("active");
@@ -215,7 +279,7 @@ $(document).ready(function() {
 				// $(this).parent().find(".playpause").css("height","90%");
 				$(this).parent().find(".playpause").fadeTo(1,0);
 				// video.attr("controls", "true");
-				// slide.hide();
+				slide.hide();
 			}
 		});
 
@@ -355,6 +419,21 @@ $.fn.isInViewport = function() {
 	return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+function navscroll(nav) {
+
+	var linkId = nav.getAttribute("href"),
+		anchor = document.querySelector(linkId),
+		scrollText = anchor.parentElement.querySelector('.navlink');
+
+	if (linkId == "#communitiesAnchor") {
+		scrollText.style.top = "30vh";
+	}else{
+		scrollText.style.top = "50vh";
+		console.log("link clicked")
+	}
+
+}
+
 
 // var videoEl = document.querySelectorAll(".darlington"), track;
 
@@ -420,8 +499,9 @@ function hideslider(video) {
 //video slider initialization
 var mySlider = new Siema({
 	perPage: {
+		440: 2,
     	768: 2,
-    	1024: 3,
+    	1025: 3,
   	},
 });
 

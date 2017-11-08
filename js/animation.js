@@ -1,4 +1,4 @@
-if (/Mobi/.test(navigator.userAgent)) {
+if ($(window).width() <= 1024) {
     //is mobile
 
 	//Animations - ScrollMagic and TweenMax
@@ -76,7 +76,8 @@ if (/Mobi/.test(navigator.userAgent)) {
 		triggerElement: '#intro1',
 		triggerHook: 'onLeave',
 		duration: 1500,
-		reverse: true
+		reverse: true,
+		// offset: 3
 	}).setTween(".intro-environment", 1, { top: "-30vh"}).addTo(controller);
 
 	var introScene = new ScrollMagic.Scene({
@@ -102,8 +103,8 @@ if (/Mobi/.test(navigator.userAgent)) {
 	var pinScene = new ScrollMagic.Scene({
 		triggerElement: '#breaths-video',
 		triggerHook: 'onLeave',
-		duration: 500,
-		offset: 80
+		duration: 100,
+		// offset: 30
 	}).setPin('.content.click-video', {pushFollowers: true}).addTo(controller);
 
 	//var pinScene2 = new ScrollMagic.Scene({
@@ -270,7 +271,7 @@ if (/Mobi/.test(navigator.userAgent)) {
 		triggerElement: '.communities-lb',
 		triggerHook: 'onLeave',
 		duration: 1500
-	}).setTween(".communities-lb .lightbox-link-holder", 1, { opacity: "1", top: "-80vh" }).addTo(controller);
+	}).setTween(".communities-lb .lightbox-link-holder", 1, { opacity: "1", top: "0vh" }).addTo(controller);
 
 	var pinScene = new ScrollMagic.Scene({
 		triggerElement: '.communities-lb',
@@ -380,53 +381,60 @@ if (/Mobi/.test(navigator.userAgent)) {
 	//}).setPin('#intro6', {pushFollowers: false}).addTo(controller);
 
 	//nav Underlining
-	var navLine = new ScrollMagic.Scene({
-		triggerElement:"#intro1",
-		triggerHook: "onLeave",
-		reverse: true
-	}).setTween("li.environment a", .1, {borderBottom: "2px solid black", className:"+=set"}).addTo(controller);
+	// var navLine = new ScrollMagic.Scene({
+	// 	triggerElement:"#intro1",
+	// 	triggerHook: "onLeave",
+	// 	reverse: true,
+	// 	//offset: -10
+	// }).setTween("li.environment a", .1, {borderBottom: "2px solid black", className:"+=set"}).addTo(controller);
 
-	var navLine = new ScrollMagic.Scene({
-		triggerElement:"#intro2",
-		triggerHook: "onLeave",
-		reverse: true
-	}).setTween("li.environment a", .1, {borderBottom: "none", className:"-=set"}).addTo(controller);
+	// var navLine = new ScrollMagic.Scene({
+	// 	triggerElement:"#intro2",
+	// 	triggerHook: "onLeave",
+	// 	reverse: true
+	// }).setTween("li.environment a", .1, {borderBottom: "none", className:"-=set"}).addTo(controller);
 
-	var navLine = new ScrollMagic.Scene({
-		triggerElement:"#intro2",
-		triggerHook: "onLeave",
-		reverse: true
-	}).setTween("li.economy a", .1, {borderBottom: "2px solid black", className:"+=set"}).addTo(controller);
+	// var navLine = new ScrollMagic.Scene({
+	// 	triggerElement:"#intro2",
+	// 	triggerHook: "onLeave",
+	// 	reverse: true,
+	// 	//offset: -10
+	// }).setTween("li.economy a", .1, {borderBottom: "2px solid black", className:"+=set"}).addTo(controller);
 
-	var navLine = new ScrollMagic.Scene({
-		triggerElement:".communities-lb",
-		triggerHook: "onLeave",
-		reverse: true
-	}).setTween("li.economy a", .1, {borderBottom: "none", className:"-=set"}).addTo(controller);
+	// var navLine = new ScrollMagic.Scene({
+	// 	triggerElement:".communities-lb",
+	// 	triggerHook: "onLeave",
+	// 	reverse: true,
+	// 	//offset: -10
+	// }).setTween("li.economy a", .1, {borderBottom: "none", className:"-=set"}).addTo(controller);
 
-	var navLine = new ScrollMagic.Scene({
-		triggerElement:".communities-lb",
-		triggerHook: "onLeave",
-		reverse: true
-	}).setTween("li.communities a", .1, {borderBottom: "2px solid black", className:"+=set"}).addTo(controller);
+	// var navLine = new ScrollMagic.Scene({
+	// 	triggerElement:".communities-lb",
+	// 	triggerHook: "onLeave",
+	// 	reverse: true,
+	// 	//offset: -10
+	// }).setTween("li.communities a", .1, {borderBottom: "2px solid black", className:"+=set"}).addTo(controller);
 
-	var navLine = new ScrollMagic.Scene({
-		triggerElement:"#darlington",
-		triggerHook: "onLeave",
-		reverse: true
-	}).setTween("li.communities a", .1, {borderBottom: "none", className:"-=set"}).addTo(controller);
+	// var navLine = new ScrollMagic.Scene({
+	// 	triggerElement:"#darlington",
+	// 	triggerHook: "onLeave",
+	// 	reverse: true,
+	// 	//offset: -10
+	// }).setTween("li.communities a", .1, {borderBottom: "none", className:"-=set"}).addTo(controller);
 
-	var navLine = new ScrollMagic.Scene({
-		triggerElement:"#darlington",
-		triggerHook: "onLeave",
-		reverse: true
-	}).setTween("li.innovation a", .1, {borderBottom: "2px solid black", className:"+=set"}).addTo(controller);
+	// var navLine = new ScrollMagic.Scene({
+	// 	triggerElement:"#darlington",
+	// 	triggerHook: "onLeave",
+	// 	reverse: true,
+	// 	//offset: -10
+	// }).setTween("li.innovation a", .1, {borderBottom: "2px solid black", className:"+=set"}).addTo(controller);
 
-	var navLine = new ScrollMagic.Scene({
-		triggerElement:"#intro5",
-		triggerHook: "onLeave",
-		reverse: true
-	}).setTween("li.innovation a", .1, {borderBottom: "none", className:"-=set"}).addTo(controller);
+	// var navLine = new ScrollMagic.Scene({
+	// 	triggerElement:"#intro5",
+	// 	triggerHook: "onLeave",
+	// 	reverse: true,
+	// 	//offset: -10
+	// }).setTween("li.innovation a", .1, {borderBottom: "none", className:"-=set"}).addTo(controller);
 
 
 }

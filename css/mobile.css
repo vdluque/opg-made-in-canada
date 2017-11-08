@@ -1,5 +1,5 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-device-width : 440px) and (max-device-width : 736px) {
+@media only screen and (max-device-width : 440px) {
 
 	.header {
 		height: 8vh;
@@ -53,6 +53,7 @@
     	width: 20px;
     	top: 2vh;
     	min-width: inherit;
+    	display: none;
 	}
 
 	.mobile-nav .nav-holder {
@@ -195,7 +196,7 @@
     	top: 45vh;
     	opacity: 1;
     	background-color: black;
-    	height: 70vh;
+    	height: 80vh;
   	}
 
   	.lightbox-link-holder p {
@@ -269,9 +270,13 @@
   	}
 
   	.footer-text h3 {
-  		font-size: 16px;
+  		font-size: 14px;
   		top: 13vh;
   		width: 90%;
+  	}
+
+  	.footer-links .opg-link {
+  		display: none;
   	}
 
   	.cta-button {
@@ -368,6 +373,7 @@
     	width: 20px;
     	top: 2vh;
     	min-width: inherit;
+    	display: none;
 	}
 
 	.mobile-nav .nav-holder {
@@ -423,6 +429,11 @@
     	float: none;
     	display: block;
     	text-align: left;
+  	}
+
+  	.video-overlay {
+  		background-size: 100% 100%;
+  		background-position-y: -15vh;
   	}
 
   	.hero-text {
@@ -483,7 +494,7 @@
 
   	.intro h1 {
   		text-transform: none;
-  		font-size: 35px;
+  		font-size: 30px;
   	}
 
   	.intro-text {
@@ -496,6 +507,7 @@
   	.intro-text p {
   		font-size: 16px;
   		width: 90%;
+      margin-top: 0;
   	}
 
   	div#introNew {
@@ -518,7 +530,7 @@
   		display: none;
   	}
 
-  	#communities .lightbox-link-holder h4 {
+  	/*#communities .lightbox-link-holder h4 {
   		font-size: 35px;
   		position: relative;
   		top: -25px;
@@ -529,10 +541,12 @@
   		margin-bottom: 0px;
   		position: relative;
   		top: -25px;
-  	}
+  	}*/
 
   	.lightbox-link-holder h4 {
   		font-size: 35px;
+  		position: relative;
+  		top: 7px;
   	}
 
   	.lightbox-link-holder p {
@@ -541,55 +555,71 @@
   	}
 
   	.slides-wrap {
-  		top: -130px;
+  		top: -152vh;
     	height: 40vh;
     	background-color: black;
   	}
 
   	.darlington {
-  		height: 68vh;
+  		height: 100vh;
   	}
 
   	.darlington #video {
   		position: relative;
   		top: 0px;
-  		height: auto;
+  		height: 100vh;
   	}
 
   	.darlington .playpause {
-  		height: 40%;
-  		top: -32vh;
+  		height: 100%;
+  		top: -100vh;
+      background-image: none;
   	}
 
   	.darlington .slides-wrap {
-  		top: -28vh;
+  		top: -140vh;
     	height: 40vh;
     	background-color: black;
-    	font-size: 2.3vh;
+    	font-size: 14px;
+  	}
+
+  	.slider-image {
+  		width: 27vw;
+  		height: 27vh;
+  		top: 2vh;
+  	}
+
+  	button.prev {
+  		bottom: -7vh;
+  	}
+
+  	button.next {
+  		bottom: -7vh;
   	}
 
   	.playpause {
   		width: 100%;
-  		height: 0;
+  		height: 112%;
   		position: relative;
   	}
 
   	.playpause img {
-  		width: 20vw;
-  		top: 40%;
+  		width: 8vw;
+  		top: 30%;
   	}
 
   	.click-video {
-  		height: initial;
+  		height: 100vh;
   	}
 
   	.darlington .slides-wrap h1 {
-  		font-size: 20px;
+  		font-size: 35px;
   		width: 83%;
   	}
 
   	.darlington .slides-wrap p {
   		width: initial;
+      margin: 0vh 2vw 0 8vw;
   	}
 
   	.footer-text {
@@ -622,7 +652,7 @@
   	}
 
   	.footer-links {
-  		top: -8vh;
+  		top: -13vh;
   	}
 
   	.footer-links .link {
@@ -636,19 +666,21 @@
   	}
 
   	.footer-links a.logo img {
-  		width: 20vw;
+  		width: 12vw;
   	}
 
   	.caption-overlay .lightbox-link-holder {
   		text-align: left;
+      height: 80vh;
+      top: 45vh!important;
   	}
 
-  	#communities .lightbox-link {
+/*  	#communities .lightbox-link {
   		text-align: center;
   		font-size: 12px;
   		position: relative;
   		top: -28px;
-  	}
+  	}*/
 
   	#communities .lightbox-link {
   		text-align: center;
@@ -660,7 +692,11 @@
   	}
 
   	.content {
-  		background-position: bottom;
+  		background-position-y: -40vh;
+  	}
+
+  	.footer {
+  		background-position-y: initial; 
   	}
 
 }
@@ -793,7 +829,7 @@
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 767px) and (max-width : 1025px) {
 
 	.header {
 		height: 8vh;
@@ -847,6 +883,7 @@
     	width: 20px;
     	top: 2vh;
     	min-width: inherit;
+    	display: none;
 	}
 
 	.mobile-nav .nav-holder {
@@ -989,7 +1026,7 @@
     	top: 45vh;
     	opacity: 1;
     	background-color: black;
-    	height: 70vh;
+    	height: 80vh;
   	}
 
   	.lightbox-link-holder p {
@@ -998,13 +1035,13 @@
   	}
 
   	.slides-wrap {
-  		top: 0;
-    	height: 40vh;
+  		top: -43vh;
+    	height: 35vh;
     	background-color: black;
   	}
 
   	.darlington {
-  		height: 68vh;
+  		height: 75vh;
   	}
 
   	.darlington #video {
@@ -1027,17 +1064,22 @@
 
   	.playpause {
   		width: 100%;
-  		height: 0;
+  		height:62%;
   		position: relative;
+  		top: -43vh;
+  	}
+
+  	#breaths-video .playpause {
+  		top: -35vh;
   	}
 
   	.playpause img {
-  		width: 20vw;
+  		width: 8vw;
   		top: 40%;
   	}
 
   	.click-video {
-  		height: initial;
+  		height: 42vh;
   	}
 
   	.darlington .slides-wrap h1 {
@@ -1095,7 +1137,7 @@
   	}
 
   	.footer-links a.logo img {
-  		width: 20vw;
+  		width: 12vw;
   	}
 
   	.caption-overlay .lightbox-link-holder {
@@ -1110,7 +1152,7 @@
 }
 
 /* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+@media only screen and (min-device-width : 767px) and (max-device-width : 1025px) and (orientation : landscape) {
 
 	.header {
 		height: 8vh;
@@ -1147,6 +1189,260 @@
 		padding: 0;
     	right: 4vw;
     	width: 20px;
+    	display: none;
+	}
+
+	.mobile-nav .nav-holder {
+		overflow: hidden;
+		margin: 0;
+		height: 100%;
+	}
+
+	.mobile-nav li.nav-el:not(.sound) {
+		float: left;
+	    display: block;
+	    color: black!important;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	    font-size: 30px;
+	}
+
+	/*.mobile-nav li.nav-el:hover {
+    	background-color: grey;
+    	color: white;
+	}*/
+
+	.mobile-nav li.nav-el:not(.sound) {
+		display: none;
+	}
+  
+  	.mobile-nav a.icon {
+    	float: left;
+    	display: block;
+    	position: relative;
+	    top: 2vh;
+	    left: 4vw;
+	    text-decoration: none;
+	    color: black;
+	    font-weight: bold;
+  	}
+
+  	.mobile-nav .nav-holder.responsive {
+  		position: relative;
+  		height: 100vh;
+  	    background-color: rgba(256,256,256,0.8);
+  	    top: -4px;
+  	}
+  	
+  	.mobile-nav .nav-holder.responsive a.icon {
+    	position: absolute;
+  	}
+
+  	.mobile-nav .nav-holder.responsive .nav-el {
+    	float: none;
+    	display: block;
+    	text-align: center;
+  	}
+
+  	.video-overlay {
+  		background-size: 100% 100%;
+  		background-position-y: -15vh;
+  	}
+
+  	.content {
+  		background-size: 100% 100%;
+  		background-position-y: -30vh; 
+  	}
+
+	.playpause {
+		top: -100vh!important;
+		height: 100vh;
+	}
+
+	.slides {
+		height: 100vh;
+	}
+
+	.click-video {
+		height: 75vh;
+	}
+
+	.slides-wrap {
+    top: -130vh;
+    height: 30vh;
+	}
+
+	.slider-image {
+		width: 27vw;
+		height: 20vh;
+		top: 1vh;
+	}
+
+	.caption-overlay .lightbox-link-holder {
+		width: 86%;
+		height: 46%;
+		top: 50%!important;
+		padding-top: 3%;
+	}
+
+	#tabhide {
+		display: none;
+	}
+
+	#lightbox {
+		width: 100%;
+		overflow: hidden;
+		background-color: rgba(0,0,0,1);
+		height: 100%;
+	}
+
+	.lightbox-link-holder h4 {
+		font-size: 45px;
+	}
+
+	.lightbox-link-holder p {
+		line-height: 1.75;
+		font-size: 25px;
+	}
+
+	.lightbox-link {
+		font-size: 16px;
+		width: fit-content;
+		line-height: 35px;
+		padding: 0px 10px;
+	}
+
+	.lightbox-inner-content {
+		font-size: 18px;
+		max-height: 70vh;
+		overflow: scroll;
+	}
+
+	#lightbox button {
+		top: -74vh;
+		left: 90vw;
+	}
+
+	.intro-overlay {
+    	height: 50%;
+    	background-color: black;
+    	position: relative;
+    	bottom: -50%;
+	}
+
+	.intro h1 {
+  		text-transform: none;
+  		font-size: 45px;
+  	}
+
+  	.intro-text {
+  		width: 90%;
+  		left: 5vw;
+  		top: 3vh;
+  	}
+
+  	.intro-text p {
+  		font-size: 25px;
+  	}
+
+  	.hero-text {
+  		text-align: left;
+  		background-color: black;
+  	}
+
+  	.darlington .playpause {
+    	background-image: none;
+    	top: -60vh!important;
+	}
+
+	.darlington .slides-wrap {
+    	top: -68vh;
+    	height: 38vh;
+    	background-color: black;
+    	font-size: 25px;
+	}
+
+  .darlington .playpause img {
+    top: 30%;
+  }
+
+  	.hero-text h1 {
+  		top: 5vh;
+  		margin: 0 5vw;
+  		font-size: 55px;
+  	}
+
+  	.hero-text h4 {
+  		width:auto;
+  		top: 5vh;
+  		margin: 10px 5vw;
+  		font-size: 26px;
+  		font-weight: 400;
+  		line-height: 1.75;
+  	}
+
+  	div#introNew {
+  		height: 155vh;
+  	}
+
+  	#more {
+  		bottom: 0px;
+  	}
+
+  	.row-overlay {
+  		padding: 7vh 0;
+  	}
+
+  	.slide-down {
+  		font-size: 35px;
+  	}
+
+  	.footer {
+  		background-position-y: initial;
+  	}
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 767px) and (max-device-width : 1025px) and (orientation : portrait) {
+
+	.header {
+		height: 8vh;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	.nav .nav-el {
+		display: none;
+	}	
+
+	.mobile-nav .nav-el a {
+		color: black;
+	}
+
+	.mobile-nav {
+		display: block;
+		background-color: rgba(256,256,256,0.8);
+		height: 8vh;
+	}
+
+	.mobile-logo {
+		margin: auto;
+		position: relative;
+	}
+
+	.mobile-logo img {
+		height: 6vh;
+	}
+
+	.mobile-nav li.sound {
+		padding: 0;
+    	right: 4vw;
+    	width: 20px;
+    	display: none;
 	}
 
 	.mobile-nav .nav-holder {
@@ -1203,126 +1499,12 @@
   	}
 
 	.playpause {
-		top: -70vh;
-	}
-
-	.caption-overlay .lightbox-link-holder {
-		width: 86%;
-		height: 50%;
-		top: 50%;
-	}
-
-	#tabhide {
-		display: none;
-	}
-
-	#lightbox {
-		width: 100%;
-		overflow: hidden;
-		background-color: rgba(0,0,0,0.9);
-	}
-
-	.lightbox-link-holder h4 {
-		font-size: 45px;
-	}
-
-	.lightbox-link-holder p {
-		line-height: 1.75;
-		font-size: 25px;
-	}
-
-	.lightbox-link {
-		font-size: 16px;
-		width: fit-content;
-		line-height: 35px;
-		padding: 0px 10px;
-	}
-
-	.lightbox-inner-content {
-		font-size: 16px;
-		max-height: 70vh;
-		overflow: scroll;
-	}
-
-	#lightbox button {
-		top: -74vh;
-		left: 90vw;
-	}
-
-	.intro-overlay {
-    	height: 50%;
-    	background-color: black;
-    	position: relative;
-    	bottom: -50%;
-	}
-
-	.intro h1 {
-  		text-transform: none;
-  		font-size: 45px;
-  	}
-
-  	.intro-text {
-  		width: 90%;
-  		left: 5vw;
-  		top: 10%;
-  	}
-
-  	.intro-text p {
-  		font-size: 26px;
-  	}
-
-  	.hero-text {
-  		text-align: left;
-  		background-color: black;
-  	}
-
-  	.darlington .playpause {
-    	height: 90%;
-    	top: -75vh;
-	}
-
-	.darlington .slides-wrap {
-    	top: -93vh;
-    	height: 25vh;
-    	background-color: black;
-    	font-size: 2.3vh;
-	}
-
-  	.hero-text h1 {
-  		top: 5vh;
-  		margin: 0 5vw;
-  		font-size: 55px;
-  	}
-
-  	.hero-text h4 {
-  		width:auto;
-  		top: 5vh;
-  		margin: 10px 5vw;
-  		font-size: 26px;
-  		font-weight: 400;
-  		line-height: 1.75;
-  	}
-
-  	#more {
-  		bottom: 0px;
-  	}
-
-  	.row-overlay {
-  		padding: 7vh 0;
-  	}
-
-  	.slide-down {
-  		font-size: 35px;
-  	}
-
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-
-	.playpause {
-		top: -20vh;
+		top: -43vh;
 		background-image: none!important;
+	}
+
+	.breaths-video .playpause {
+		top: -25vh;
 	}
 
 	/*.caption-overlay .lightbox-link-holder {
@@ -1426,11 +1608,13 @@
 	button.prev {
 		bottom: 40%;
 		height: auto;
+    letter-spacing: 7vw;
 	}
 
 	button.next {
 		bottom: 40%;
 		height: auto;
+    right: 7vw;
 	}
 
 	#intro2 {
@@ -1448,24 +1632,136 @@
 	}
 
 }
-/**********
-iPad 3
-**********/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
 
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
+	.header {
+		height: 8vh;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	.nav .nav-el {
+		display: none;
+	}	
+
+	.mobile-nav .nav-el a {
+		color: black;
+	}
+
+	.mobile-nav {
+		display: block;
+		background-color: rgba(256,256,256,0.8);
+		height: 8vh;
+	}
+
+	.mobile-logo {
+		margin: auto;
+		position: relative;
+	}
+
+	.mobile-logo img {
+		height: 6vh;
+		position: relative;
+		/*top: 1vh;*/
+		/*left: 5vw;*/
+	}
+
+	.mobile-nav li.sound {
+		padding: 0;
+    	right: 4vw;
+    	width: 20px;
+    	top: 2vh;
+	}
+
+	.mobile-nav .nav-holder {
+		overflow: hidden;
+		margin: 0;
+		height: 100%;
+	}
+
+	.mobile-nav li.nav-el:not(.sound) {
+		float: left;
+	    display: block;
+	    color: black!important;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	    font-size: 30px;
+	}
+
+	/*.mobile-nav li.nav-el:hover {
+    	background-color: grey;
+    	color: white;
+	}*/
+
+	.mobile-nav li.nav-el:not(.sound) {
+		display: none;
+	}
+  
+  	.mobile-nav a.icon {
+    	float: left;
+    	display: block;
+    	position: relative;
+	    top: 2vh;
+	    left: 4vw;
+	    text-decoration: none;
+	    color: black;
+	    font-weight: bold;
+  	}
+
+  	.mobile-nav .nav-holder.responsive {
+  		position: relative;
+  		height: 100vh;
+  	    background-color: rgba(256,256,256,0.8);
+  	    top: -4px;
+  	}
+  	
+  	.mobile-nav .nav-holder.responsive a.icon {
+    	position: absolute;
+  	}
+
+  	.mobile-nav .nav-holder.responsive .nav-el {
+    	float: none;
+    	display: block;
+    	text-align: center;
+  	}
 
 }
 
+/**********
+iPad 3
+**********/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
 
 
 
 }
 /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (max-width : 1230px) {
 
+	a.sound-toggle span {
+		display: none;
+	}
 
+	.nav-el:not(.sound) {
+		z-index: 2;
+	}
+
+	.nav-el.sound {
+		z-index: 0;
+	}
+
+}
+
+/*special css for audio indicator*/
+@media only screen and (min-width : 1025px) and (max-width: 1213px){
+
+	.nav-el.sound {
+		top: -2vh;
+	}
 
 }
 

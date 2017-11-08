@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5,p,a {
 	display: inline-block;
 	height: 70px;
 	width: 100vw;
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgba(255,255,255,1);
 	z-index: 8;
 	/*box-shadow: black 0px -5px 25px;*/
 }
@@ -89,6 +89,10 @@ a.logo img {
 	top: 4px;
 }
 
+.active {
+	border-bottom: 2px solid black;
+}
+
 .in-view {
 	border-bottom: 2px solid black;
 }
@@ -105,7 +109,7 @@ a.logo img {
 	z-index: 4;
 	display: inline-block;
 	height: 100vh;
-	width: 100%;
+	width: 100%!important;
 	overflow: hidden;
 	background-size: cover;
 }
@@ -119,12 +123,12 @@ iframe.breaths-video {
 	border: none;
 }
 
-.content.click-video.intro1 {
+/*.content.click-video.intro1 {
     padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0;
     background-color: black;
-}
+}*/
 
 .hero-text {
 	position: relative;
@@ -179,6 +183,10 @@ iframe.breaths-video {
 	background-color: white;
 }
 
+.scrollmagic-pin-spacer {
+	background-color: black;
+}
+
 iframe.main-video {
 	position: absolute;
     top: 0;
@@ -199,9 +207,9 @@ iframe.main-video {
 	/*border: none;*/
 }
 
-.intro1 .playpause {
+/*.intro1 .playpause {
 	display: none;
-}
+}*/
 
 .darlington #video {
 	position: relative;
@@ -220,7 +228,7 @@ iframe.main-video {
 
 .playpause img {
 	position: relative;
-	top: 37%;
+	top: 40%;
 	width: 7vw;
 }
 
@@ -251,6 +259,7 @@ iframe.main-video {
 	z-index: 3;
 	position: relative;
 	background-color: black;
+	width: 100%!important;
 	/*transform: translate3d(0,0,0);
 	/*z-index: 4!important;*/
 }
@@ -352,7 +361,7 @@ body.MSIE .footer-links {
 
 .intro-text {
 	width: 50%;
-	top: 100vh;
+	top: 50%;
 	left: 10vw;
 	opacity: 1;
 	float: left;
@@ -470,7 +479,7 @@ p.slides-caption {
 	position: relative;
 	top: -152vh;
 	z-index: 4;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.8);
 	text-align: center;
 }
 
@@ -494,7 +503,7 @@ p.slides-caption {
 }
 
 .slider-image {
-	width: 20vw;
+	width: 23vw;
     height: 23vh;
     margin: 20px;
     position: relative;
@@ -532,9 +541,9 @@ p.slides-caption {
 }
 
 .caption-overlay {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
-	font-size: 20px;
+	font-size: 18px;
 	background-color: rgba(0, 0, 0, 0.2);
 	text-align: left;
 	/*display: none;*/
@@ -547,10 +556,18 @@ p.slides-caption {
 	top: 100vh;
 	padding: 0 7vw;
 	line-height: 1.75;
-	width: 43%;
+	width: 40%;
 	color: white;
 	text-align: left;
 	opacity: 1;
+}
+
+.communities-lb#contentLightbox {
+	height: 120vh;
+}
+
+#communities .lightbox-link-holder {
+	top:  40vh;
 }
 
 .lightbox-link {
@@ -601,6 +618,11 @@ p.slides-caption {
 .lightbox-link-holder h4 {
 	text-align: left;
 	font-size: 50px;
+}
+
+#communities .lightbox-link-holder h4 {
+	line-height: 1.2;
+	margin-bottom: 15px;
 }
 
 #lightbox {
@@ -663,8 +685,10 @@ p.slides-caption {
     width: 80%;
     text-align: left;
     max-height: 40vh;
-    overflow: scroll;
+    overflow: auto;
+    overflow-y: auto;
     line-height: 1.75;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .partnerships-lb {
@@ -793,6 +817,10 @@ p.slides-caption {
 	height: 20px;
     position: relative;
     top: 2px;
+}
+
+.ui-effects-placeholder{
+   display: none !important;
 }
 
 .mobile-nav	{
